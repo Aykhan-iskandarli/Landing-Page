@@ -1,0 +1,140 @@
+.team_section{
+    width: 100%;
+    height: 100%;
+    margin: 50px 0;
+    .team-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        li{
+            border: 1px solid $primary;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all .3s ease;
+            position: relative;
+        
+            @include responsive(mobile){
+                margin-top: 15px;
+            }
+            @include responsive(tablet){
+                margin-top: 15px;
+            }
+            &:hover .divider:before, &:hover .divider:after{
+                width: 60px;
+            }
+            &:not(:last-child){
+                @include responsive(desktop){
+                    margin-right: 45px;
+                }
+              
+            }
+            &:hover .team_profil::before{
+                height:100%;
+            }
+            &:hover .social-links{
+                transform: translate(0,0%);
+            }
+        
+            .team-name{
+                font-size: 1.7rem;
+                margin-top: 10px;
+            }
+            p{
+                font-size: 1.5rem;
+                color: $gray;
+            }
+            .team_profil{
+                width: 200px;
+                height: 200px;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: rgb(255,255,255);
+                    opacity: 0.2;
+                    border-radius: 20px;
+                    width: 100%;
+                    height: 0%;
+                    transition: all .3s ease;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .divider{
+                width: 7px ;
+                height: 7px ;
+                background: $brown;
+                border-radius: 50%;
+                position: relative;
+                margin: 10px 0;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 100%;
+                    top: 40%;
+                    background-color: $brown;
+                    height: 1px;
+                    width: 30px;
+                    margin-left: 5px;
+                    transition: all .3s ease;
+                 
+                }
+                 &::after{
+                     content: "";
+                     position: absolute;
+                     right: 100%;
+                     top: 40%;
+                     background-color: $brown;
+                     height: 1px;
+                     width: 30px;
+                     margin-right: 5px;
+                     transition: all .3s ease;
+                 }
+            
+            }
+            .social-links{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                right: 20px;
+                padding: 10px;
+                height: 140px;
+                transform: translate(0,-100%);
+                background-color: $pink;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                transition:  all .3s ease;
+                z-index: 99;
+                .icon1{
+                   color: $white;
+                   margin-top: 15px;
+                   cursor: pointer;
+                   &:hover svg{
+                       color: $black;
+                   }
+                   svg{
+                       width: 15px;
+                       height: 15px;
+                       transition:  all .3s ease;
+
+                   }
+                }
+            }
+        }
+      
+    }
+}
+

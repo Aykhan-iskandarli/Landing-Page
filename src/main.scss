@@ -1,0 +1,24 @@
+// style base import
+@import "style/base/reset.scss";
+
+// style abstracts import
+@import "style/abstracts/variables.scss";
+@import "style/abstracts/mixin.scss";
+
+// style layout import
+@import "style/layout/grid.scss";
+
+// style utils import
+@import "style/utils/utils.scss";
+
+// style components import
+@import "style/components/navbar.scss";
+@import "style/components/hero.scss";
+@import "style/components/button.scss";
+@import "style/components/logo.scss";
+@import "style/components/growth.scss";
+@import "style/components/footer.scss";
+@import "style/components/about.scss";
+@import "style/components/title.scss";
+@import "style/components/partner.scss";
+@import "style/components/team.scss";

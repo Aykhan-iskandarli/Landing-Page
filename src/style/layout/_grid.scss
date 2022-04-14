@@ -1,0 +1,46 @@
+.row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+@include responsive(desktop){
+    @for $i from 1 to 12 {
+        .col-#{$i}{
+            width: calc(100% / 12) * $i;
+        }
+    }
+}
+
+
+// @for $i from 1 to 12 {
+//     .col-#{$i}{
+//         width: calc(100% / 12) * $i;
+
+//         @include responsive(mobile){
+//         width: 100%;
+//         }
+//         @include responsive(tablet){
+//             width: 100%;
+//         }
+//     }
+// }
+
+@include responsive(tablet){
+    @for $i from 1 to 12 {
+        .col-md-#{$i}{
+            width: calc(100% / 12) * $i;
+        }
+    }
+}
+
+@include responsive(mobile){
+    @for $i from 1 to 12 {
+        .col-xs-#{$i}{
+            width: calc(100% / 12) * $i;
+        }
+    }
+}
+
+

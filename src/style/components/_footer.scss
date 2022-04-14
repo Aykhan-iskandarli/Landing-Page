@@ -1,0 +1,33 @@
+.footer{
+    background-color: $bgFooter;
+    height: 100%;
+    padding: 10px;
+    .menu-list{
+        color: $white;
+        padding: 10px;
+    
+        h4{
+            height: 30px;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+        li{
+            line-height: 30px;
+            font-size: 1.4rem;
+            p{
+                @include responsive(desktop){
+                    width: 380px;
+
+                }
+            }
+            a{
+                color: $white;
+                font-size: 1.4rem;
+                transition: all .3s ease;
+                &:hover{
+                   padding-left: 10px;
+                }
+            }
+        }
+    }
+}

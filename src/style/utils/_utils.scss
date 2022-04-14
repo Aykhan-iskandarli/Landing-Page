@@ -1,0 +1,43 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  @include responsive(mobile) {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  @include responsive(tablet) {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  @include responsive(laptop) {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-between{
+  justify-content: space-between;
+}

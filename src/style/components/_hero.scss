@@ -1,0 +1,79 @@
+
+.hero_section{
+    margin: 40px 0px;
+    display: flex;
+    height: 1000px;
+    position: relative;
+    @include responsive(mobile) {
+        height: 700px;
+     }
+
+     @include responsive(tablet) {
+        height: 700px;
+     }
+   .hero-content{
+       background: url("/images/banner.png") no-repeat;
+       background-size: cover;
+       background-position: top center;
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top: -110px;
+       left: 0;
+       @include responsive(tablet){
+        background: url("/images/banner-mobil.png") no-repeat;
+       }
+       .hero-text{
+          position: absolute;
+          top: 20%;
+          h1{
+              color: $white;
+              font-size: 3.3rem;
+              @include responsive(tablet){
+                width: 400px;
+               }
+               @include responsive(mobile){
+                width: 100%;
+               }
+              span{
+                  color: $primary;
+              }
+          }
+          p{
+              font-size: 2.3rem;
+              margin: 30px 0;
+              width: 85%;
+              color: $white;
+          }
+          .hero-tag{
+              margin-bottom: 60px;
+            .hero-tag-div{
+              background-color: $white;
+              border-radius: 50px;
+              padding: 8px;
+              color: $gray;
+              font-size: 1.8rem;
+              @include responsive(desktop){
+               width: 450px;
+               }
+               @include responsive(laptop){
+                width: 450px;
+                }
+               @include responsive(mobile){
+                width: 100%;
+                font-size: 13px;
+               }
+              .new{
+                  color: $white;
+                  width: 80px;
+                  height: 30px;
+                  background-color: $secondary;
+                  border-radius: 50px;
+                  padding: 5px;
+                  margin-right: 15px;
+              }
+            }              
+          }
+       }
+   }
+}

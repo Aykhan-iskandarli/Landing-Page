@@ -1,0 +1,30 @@
+.title_component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    span{
+        font-weight: 700;
+        font-size: 2rem;
+        background-image: $linear;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h2{
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    p{
+        color: $gray;
+        font-size: 1.7rem;
+        line-height: 25px;
+        width: 50%;
+        text-align: center;
+        margin-bottom: 20px;
+        @include responsive(mobile){
+            width: 100%;
+        }
+    }
+}

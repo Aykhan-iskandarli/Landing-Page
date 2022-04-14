@@ -1,0 +1,51 @@
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative;
+}
+
+.primary-btn{
+    padding:  12px;
+    width: 200px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $black;
+    z-index: 99;
+    border-radius: 10px;
+    border: 1px solid $bgBtn;
+    &:hover{
+        color: $white;
+    }
+    &:hover:before,&:hover:after{
+        width: 50% ;
+      }
+    &::before{
+      content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color:$secondary; 
+        width: 0%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.3s linear;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+  }
+  &::after{
+    content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color:$secondary; 
+      width: 0%;
+      height: 100%;
+      z-index: -1;
+      transition: all 0.3s linear;
+      border-top-right-radius: 10px !important;
+      border-bottom-right-radius: 10px !important;
+}
+
+}
